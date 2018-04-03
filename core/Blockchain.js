@@ -2,6 +2,8 @@ const Block = require('./Block');
 
 class BlockChain{
     
+    //region constructor and getters
+
     constructor(){
         this.chain = [Block.genesis()];
     }
@@ -10,6 +12,10 @@ class BlockChain{
         return this.chain;
     }
     
+    //endregion
+
+    //region methods
+
     addBlock(data)
     {
        // console.log(this.chain[this.chain.length-1].toString());
@@ -55,6 +61,8 @@ class BlockChain{
         this.chain = newChain;
     }
     
+    //endregion
+
 }
 
 module.exports = BlockChain;
