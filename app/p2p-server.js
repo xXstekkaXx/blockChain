@@ -8,11 +8,15 @@ const peers = process.env.PEERS ? process.env.PEERS.split(',') : [];
 
 class P2PServer
 {
+    //region constructor
     constructor(blockchain){
         this.blockchain = blockchain;
         this.socketArray = [];
     }
     
+    //endregion
+
+    //region methods
     listen()
     {
         //istanzia l'oggetto server
@@ -100,6 +104,8 @@ class P2PServer
             //this.sendChain(socket);
         });
     }
+
+    //endregion
 }
 
 module.exports = P2PServer;
